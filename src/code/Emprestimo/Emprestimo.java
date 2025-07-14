@@ -1,10 +1,11 @@
 package Emprestimo;
-public class Emprestimo {
-    private Usuario usuario;
-    private Exemplar exemplar;
-    private LocalDate dataEmprestimo;
-    private LocalDate dataDevolucao;
-    private boolean finalizado;
 
-    // Métodos: éAtrasado(), finalizar(), etc.
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Emprestimo {
+
+
+    // Métodos: éAtrasado(), finalizar()...
 }

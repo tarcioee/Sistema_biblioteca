@@ -1,3 +1,6 @@
+package Repositorio;
+
+import Usuario;
 import Livro.Livro;
 
 public class Repositorio {

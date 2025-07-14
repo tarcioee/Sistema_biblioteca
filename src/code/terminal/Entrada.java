@@ -1,4 +1,4 @@
-package terminal;
+package Terminal;
 
 public class Entrada {
     
