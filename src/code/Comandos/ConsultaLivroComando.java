@@ -1,4 +1,4 @@
-//aparentemente ok
+//Revisado, tudo certo
 package Comandos;
 
 import Repositorio.Repositorio;
@@ -24,10 +24,10 @@ public class ConsultaLivroComando implements IComando {
         }
 
         System.out.println("Título: " + livro.getTitulo());
-        System.out.println("Reservas: " + livro.getReservas().size());
+        System.out.println("Quantidade Reservas: " + livro.getReservas().size());
 
         if (!livro.getReservas().isEmpty()) {
-            System.out.println("Usuários com reserva:");
+            System.out.println("Nome dos Usuários com reserva:");
             for (Reserva r : livro.getReservas()) {
                 System.out.println("- " + r.getUsuario().getNome());
             }
@@ -39,7 +39,21 @@ public class ConsultaLivroComando implements IComando {
             System.out.print("Exemplar " + ex.getCodigo() + " - " + status);
 
             if (!ex.estaDisponivel() && ex.getUsuarioAtual() != null) {
-                System.out.print(" (Emprestado para: " + ex.getUsuarioAtual().getNome() + ")");
+                var usuario = ex.getUsuarioAtual();
+                System.out.print(" (Emprestado para: " + usuario.getNome());
+
+                // procura o empréstimo ativo do exemplar
+                var emprestimo = usuario.getEmprestimos().stream()
+                    .filter(e -> e.estaEmAndamento() && e.getExemplar().getCodigo() == ex.getCodigo())
+                    .findFirst()
+                    .orElse(null);
+
+                if (emprestimo != null) {
+                    System.out.print(", Data de empréstimo: " + emprestimo.getDataEmprestimo());
+                    System.out.print(", Data prevista de devolução: " + emprestimo.getDataDevolucaoPrevista());
+                }
+
+                System.out.print(")");
             }
 
             System.out.println();

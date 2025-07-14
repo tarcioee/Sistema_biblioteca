@@ -1,4 +1,4 @@
-// bug resolvido: permitia mesmo usuario tenta fazer x reservas do mesmo livro 
+//desbugado em caso de teste comum, checar tentando quebrar
 package Comandos;
 
 import java.time.LocalDate;

@@ -18,7 +18,7 @@ public class Emprestimo {
         this.dataDevolucaoPrevista = dataEmprestimo.plusDays(usuario.getLimiteDiasEmprestimo());
         this.dataDevolucaoReal = null;
     }
-
+    
     public IUsuario getUsuario() {
         return usuario;
     }

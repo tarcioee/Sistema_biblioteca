@@ -1,3 +1,4 @@
+//ok
 package Comandos;
 
 public interface IComando {

@@ -1,3 +1,4 @@
+// hmm
 package Comandos;
 
 import java.time.format.DateTimeFormatter;
@@ -29,14 +30,14 @@ public class ConsultaUsuarioComando implements IComando {
         System.out.println("Empréstimos:");
         for (Emprestimo emp : usuario.getEmprestimos()) {
             String status = emp.estaEmAndamento() ? "Em andamento" : "Finalizado";
-            System.out.print("- Livro: " + emp.getExemplar().getCodigo() / 100);
+            System.out.print("- Titulo: " + emp.getExemplar().getLivro().getTitulo());
             System.out.print(" | Data: " + emp.getDataEmprestimo().format(fmt));
             System.out.print(" | Status: " + status);
 
             if (emp.getDataDevolucaoReal() != null) {
                 System.out.print(" | Devolvido em: " + emp.getDataDevolucaoReal().format(fmt));
             } else {
-                System.out.print(" | Previsto para: " + emp.getDataDevolucaoPrevista().format(fmt));
+                System.out.print(" | Devolução Prevista para: " + emp.getDataDevolucaoPrevista().format(fmt));
             }
 
             System.out.println();
@@ -44,7 +45,7 @@ public class ConsultaUsuarioComando implements IComando {
 
         System.out.println("Reservas:");
         for (Reserva res : usuario.getReservas()) {
-            System.out.println("- Livro: " + res.getLivro().getTitulo() + " | Data: " + res.getDataReserva().format(fmt));
+            System.out.println("- Titulo: " + res.getLivro().getTitulo() + " | Data da reserva: " + res.getDataReserva().format(fmt));
         }
     }
 }

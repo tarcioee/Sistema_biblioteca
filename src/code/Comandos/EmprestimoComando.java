@@ -1,4 +1,4 @@
-//aparentemente funcionando bem
+//desbugado em caso de teste comum, checar tentando quebrar
 package Comandos;
 
 import Repositorio.Repositorio;

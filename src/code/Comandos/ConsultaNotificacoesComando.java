@@ -1,8 +1,8 @@
+//Revisado, tudo certo
 package Comandos;
 
 import Repositorio.Repositorio;
 import Usuarios.IUsuario;
-import Observadores.IObservador;
 
 public class ConsultaNotificacoesComando implements IComando {
 
@@ -21,10 +21,6 @@ public class ConsultaNotificacoesComando implements IComando {
             return;
         }
 
-        if (usuario instanceof IObservador) {
-            System.out.println("Notificações recebidas: " + usuario.getNotificacoesRecebidas());
-        } else {
-            System.out.println("Usuário não é observador.");
-        }
+        System.out.println("Notificações recebidas: " + usuario.getNotificacoesRecebidas());
     }
 }
