@@ -21,6 +21,7 @@ public class Entrada {
     }
 
     public void iniciar() {
+        @SuppressWarnings("resource") // ver depois se da problema
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
