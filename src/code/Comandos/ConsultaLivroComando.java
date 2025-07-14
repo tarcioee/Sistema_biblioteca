@@ -1,3 +1,4 @@
+//aparentemente ok
 package Comandos;
 
 import Repositorio.Repositorio;

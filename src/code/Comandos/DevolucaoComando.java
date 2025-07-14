@@ -1,3 +1,4 @@
+//bugado em caso de teste comum
 package Comandos;
 
 import Repositorio.Repositorio;

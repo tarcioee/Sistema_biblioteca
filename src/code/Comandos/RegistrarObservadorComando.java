@@ -1,3 +1,4 @@
+//ou esse nao funciona ou é na parte do observador
 package Comandos;
 
 import Repositorio.Repositorio;
