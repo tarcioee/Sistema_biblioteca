@@ -2,7 +2,6 @@ package Comandos;
 
 import Repositorio.Repositorio;
 import Usuarios.IUsuario;
-import Livros.ILivro;
 import Emprestimo.Emprestimo;
 
 import java.time.LocalDate;

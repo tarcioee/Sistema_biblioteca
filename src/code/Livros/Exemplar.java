@@ -6,6 +6,7 @@ import Livros.EstadoExemplar.ExemplarEmprestado;
 import Usuarios.IUsuario;
 
 public class Exemplar implements IExemplar {
+    public ILivro livro;
     private int codigo;
     private IExemplarEstado estado;
     private IUsuario usuarioAtual;
@@ -16,6 +17,9 @@ public class Exemplar implements IExemplar {
         this.usuarioAtual = null;
     }
 
+    public ILivro getLivro(){
+        return livro;
+    }
     @Override
     public int getCodigo() {
         return codigo;

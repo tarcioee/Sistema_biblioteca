@@ -43,7 +43,10 @@ public class Emprestimo {
         this.dataDevolucaoReal = dataDevolucao;
         exemplar.devolver();
     }
-
+    
+    public boolean isFinalizado() {
+        return dataDevolucaoReal != null;
+    }
     public boolean estaEmAndamento() {
         return dataDevolucaoReal == null;
     }

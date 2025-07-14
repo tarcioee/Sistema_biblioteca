@@ -2,7 +2,6 @@ package Emprestimo.Estrategias;
 
 import Livros.IExemplar;
 import Livros.ILivro;
-import Reserva.Reserva;
 import Usuarios.IUsuario;
 
 public class EmprestimoAluno implements IEstrategiaEmprestimo {

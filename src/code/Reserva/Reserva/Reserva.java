@@ -2,14 +2,14 @@ package Reserva;
 
 import java.time.LocalDate;
 import Usuarios.IUsuario;
-import Livros.Livro;
+import Livros.ILivro;
 
 public class Reserva {
     private IUsuario usuario;
-    private Livro livro;
+    private ILivro livro;
     private LocalDate dataReserva;
 
-    public Reserva(IUsuario usuario, Livro livro, LocalDate dataReserva) {
+    public Reserva(IUsuario usuario, ILivro livro, LocalDate dataReserva) {
         this.usuario = usuario;
         this.livro = livro;
         this.dataReserva = dataReserva;
@@ -19,7 +19,7 @@ public class Reserva {
         return usuario;
     }
 
-    public Livro getLivro() {
+    public ILivro getLivro() {
         return livro;
     }
 

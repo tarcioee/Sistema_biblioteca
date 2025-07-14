@@ -55,7 +55,7 @@ public abstract class Usuario implements IUsuario {
     @Override
     public boolean possuiEmprestimoAtivoDoLivro(int codigoLivro) {
         for (Emprestimo e : emprestimos) {
-            if (!e.isFinalizado() && e.getLivro().getCodigo() == codigoLivro) {
+            if (!e.isFinalizado() && e.getExemplar().getLivro().getCodigo() == codigoLivro) {
                 return true;
             }
         }

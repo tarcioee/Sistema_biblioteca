@@ -46,6 +46,7 @@ Sistemas_Biblioteca/src/
             -AlunoGraduacao.java
             -AlunoPosGraduacao.java
             -IUsuario.java
+            -IUsuarioObservador.java
             -Professor.java
             -Usuario.java
         app.java

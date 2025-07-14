@@ -1,5 +1,8 @@
 package Usuarios;
 
+import Emprestimo.Estrategias.EmprestimoAluno;
+import Emprestimo.Estrategias.IEstrategiaEmprestimo;
+
 public class AlunoPosGraduacao extends Usuario {
 
     public AlunoPosGraduacao(int codigo, String nome) {
@@ -15,4 +18,7 @@ public class AlunoPosGraduacao extends Usuario {
     public int getLimiteDiasEmprestimo() {
         return 5;
     }
+    public IEstrategiaEmprestimo getEstrategiaEmprestimo() {
+		return new EmprestimoAluno();
+	}
 }

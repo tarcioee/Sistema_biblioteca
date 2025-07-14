@@ -28,7 +28,7 @@ public class ReservaComando implements IComando {
             return;
         }
 
-        Reserva reserva = new Reserva(usuario, LocalDate.now());
+        Reserva reserva = new Reserva(usuario, livro, LocalDate.now());
         livro.adicionarReserva(reserva);
         usuario.getReservas().add(reserva);
 
