@@ -22,7 +22,6 @@ public class ConsultaNotificacoesComando implements IComando {
         }
 
         if (usuario instanceof IObservador) {
-            IObservador obs = (IObservador) usuario;
             System.out.println("Notificações recebidas: " + usuario.getNotificacoesRecebidas());
         } else {
             System.out.println("Usuário não é observador.");

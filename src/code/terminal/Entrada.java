@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Entrada {
     private final Map<String, IComando> comandos = new HashMap<>();
-
+    
     public Entrada() {
         comandos.put("emp", new EmprestimoComando());
         comandos.put("dev", new DevolucaoComando());
@@ -46,5 +46,6 @@ public class Entrada {
                 System.out.println("Comando inválido.");
             }
         }
+
     }
 }
