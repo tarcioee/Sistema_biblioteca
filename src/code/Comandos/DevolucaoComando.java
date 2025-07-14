@@ -26,7 +26,7 @@ public class DevolucaoComando implements IComando {
         }
 
         Emprestimo emprestimo = usuario.getEmprestimos().stream()
-            .filter(e -> e.estaEmAndamento() && e.getExemplar().getCodigo() / 100 == codLivro)
+            .filter(e -> e.estaEmAndamento() && e.getExemplar().getLivro().getCodigo() == codLivro)
             .findFirst()
             .orElse(null);
 
