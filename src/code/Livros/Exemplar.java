@@ -11,8 +11,9 @@ public class Exemplar implements IExemplar {
     private IExemplarEstado estado;
     private IUsuario usuarioAtual;
 
-    public Exemplar(int codigo) {
+    public Exemplar(int codigo, ILivro livro) {
         this.codigo = codigo;
+        this.livro = livro;
         this.estado = new ExemplarDisponivel();
         this.usuarioAtual = null;
     }
