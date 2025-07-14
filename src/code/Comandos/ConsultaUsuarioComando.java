@@ -1,4 +1,4 @@
-// hmm
+//Revisado, tudo certo
 package Comandos;
 
 import java.time.format.DateTimeFormatter;

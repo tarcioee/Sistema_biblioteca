@@ -8,7 +8,7 @@ public class EmprestimoAluno implements IEstrategiaEmprestimo {
 
     @Override
     public boolean podeEmprestar(IUsuario usuario, ILivro livro) {
-        // 1. Há exemplar disponível?
+        // requisito 1 checado. Há exemplar disponível?
         boolean temDisponivel = livro.getExemplares().stream().anyMatch(IExemplar::estaDisponivel);
         if (!temDisponivel) return false;
 

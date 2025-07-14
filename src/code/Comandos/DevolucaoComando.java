@@ -1,4 +1,4 @@
-//desbugado em caso de teste comum
+//desbugado em caso de teste comum, checar tentando quebrar
 package Comandos;
 
 import Repositorio.Repositorio;

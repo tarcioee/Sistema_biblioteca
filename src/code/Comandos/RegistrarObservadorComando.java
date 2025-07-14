@@ -26,11 +26,6 @@ public class RegistrarObservadorComando implements IComando {
             return;
         }
 
-        if (!(usuario instanceof IObservador)) {
-            System.out.println("Este usuário não pode ser observador.");
-            return;
-        }
-
         livro.registrarObservador((IObservador) usuario);
         System.out.println("Observador registrado com sucesso.");
     }
