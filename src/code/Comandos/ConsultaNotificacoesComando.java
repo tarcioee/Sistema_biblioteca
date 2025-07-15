@@ -21,9 +21,11 @@ public class ConsultaNotificacoesComando implements IComando {
             System.out.println("Usuário não encontrado.");
             return;
         }
-        
-        IObservador observador = (IObservador) usuario;
-        System.out.println("Notificações recebidas: " + observador.getContadorNotificacoes());
-        
+        if (usuario instanceof IObservador) {
+            IObservador observador = (IObservador) usuario;
+            System.out.println("Notificações recebidas: " + observador.getContadorNotificacoes());
+        } else {
+            System.out.println("Este usuário não é observador de livros.");
+        }
     }
 }

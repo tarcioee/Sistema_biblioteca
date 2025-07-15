@@ -2,54 +2,45 @@
 
 Estrutura do repositório:
 
-Sistemas_Biblioteca/src/
-    - code
-        - Comandos
-            -ConsultaLivroComando.java
-            -ConsultaNotificacoesComando.java
-            -ConsultaUsuarioComando.java
-            -DevolucaoComando.java
-            -EmprestimoComando.java
-            -Icomando.java
-            -RegistrarObservadorComando.java
-            -ReservaComando.java
-            -SairComando.java
-        - Emprestimo
-            -Emprestimo.java
-            - Estrategias
-                -EmprestimoAluno.java
-                -EmprestimoProfessor.java
-                -IEstrategiaEmprestimo.java
-        - Livros
-            - EstadoExemplar
-                -ExemplarDisponivel.java
-                -ExemplarEmprestado.java
-                -IExemplarEstado.java
-            -Exemplar.java
-            -IExemplar.java
-            -ILivro.java
-            -Livro.java
-        - Observadores
-            -IObservador.java
-            -ISujeito.java
-        - Repositorio
-            -Repositorio.java
-        - Reserva
-            -Reserva.java
-        - SistemaBiblioteca
-            -IEntidadeBiblioteca.java
-            -SistemaBiblioteca.java
-        - Terminal
-            -Entrada.java
-            -Saida.java
-        - Usuarios
-            -AlunoGraduacao.java
-            -AlunoPosGraduacao.java
-            -IUsuario.java
-            -IUsuarioObservador.java
-            -Professor.java
-            -Usuario.java
-        app.java
+src/
+│
+├── app.java
+│
+├── code/
+│   ├── Comandos/
+│   │   ├── Icomando.java
+│   │   ├── ReservaComando.java
+│   │   ├── DevolucaoComando.java
+│   │   ├── EmprestimoComando.java
+│   │   ├── ConsultaLivroComando.java
+│   │   ├── ConsultaUsuarioComando.java
+│   │   ├── ConsultaNotificacoesComando.java
+│   │   ├── RegistrarObservadorComando.java
+│   │   └── SairComando.java
+│   │
+│   ├── Emprestimo/
+│   │   ├── Emprestimo.java
+│   │   └── Estrategias/
+│   │       ├── EmprestimoAluno.java
+│   │       ├── EmprestimoProfessor.java
+│   │       └── IEstrategiaEmprestimo.java
+│   │
+│   ├── Livros/
+│   │   ├── Exemplar.java
+│   │   ├── IExemplar.java
+│   │   ├── ILivro.java
+│   │   ├── Livro.java
+│   │   └── EstadoExemplar/
+│   │       ├── IExemplarEstado.java
+│   │       ├── ExemplarDisponivel.java
+│   │       └── ExemplarEmprestado.java
+│   │
+│   ├── Observadores/
+│   │   ├── ISujeito.java
+│   │   └── IObservador.java
+│   │
+│
+
 
 Padrão singleton (obrigatório): deve ser usado pra classe Repositório só ter uma instância.
 Padrão command (obrigatório): Cada ação do usuário (empréstimo, devolução, reserva, consulta, observação) é encapsulada em uma classe de comando, facilitando a extensão e manutenção do sistema.
