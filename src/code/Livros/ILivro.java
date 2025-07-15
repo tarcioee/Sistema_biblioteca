@@ -2,9 +2,9 @@ package Livros;
 
 import java.util.List;
 
+import Biblioteca.IEntidadeBiblioteca;
 import Reserva.Reserva;
 import Usuarios.IUsuario;
-import SistemaBiblioteca.IEntidadeBiblioteca;
 import Observadores.ISujeito;
 
 public interface ILivro extends IEntidadeBiblioteca, ISujeito {

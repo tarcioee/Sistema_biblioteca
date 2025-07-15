@@ -1,4 +1,4 @@
-import SistemaBiblioteca.SistemaBiblioteca;
+import Terminal.Entrada;
 import Repositorio.Repositorio;
 import Usuarios.*;
 import Livros.*;
@@ -51,6 +51,7 @@ public class app {
         // Reservas podem ser adicionadas aqui se quiser testar
 
         // Inicia o sistema
-        SistemaBiblioteca.iniciar();
+        Entrada entrada = new Entrada();
+        entrada.iniciar();
     }
 }

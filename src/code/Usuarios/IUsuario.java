@@ -1,11 +1,11 @@
 package Usuarios;
 
-import SistemaBiblioteca.IEntidadeBiblioteca;
 import Emprestimo.Emprestimo;
 import Emprestimo.Estrategias.IEstrategiaEmprestimo;
 
 import java.util.List;
 
+import Biblioteca.IEntidadeBiblioteca;
 import Reserva.Reserva;
 
 public interface IUsuario extends IEntidadeBiblioteca {

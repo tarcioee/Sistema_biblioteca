@@ -1,12 +1,10 @@
-//ou esse nao funciona ou é na parte do observador
 package Comandos;
 
-import Repositorio.Repositorio;
-import Usuarios.IUsuario;
-import Livros.ILivro;
-import Observadores.IObservador;
+import Services.BibliotecaService;
 
 public class RegistrarObservadorComando implements IComando {
+
+    private BibliotecaService servico = new BibliotecaService();
 
     @Override
     public void executar(String[] args) {
@@ -18,20 +16,7 @@ public class RegistrarObservadorComando implements IComando {
         int codUsuario = Integer.parseInt(args[0]);
         int codLivro = Integer.parseInt(args[1]);
 
-        IUsuario usuario = Repositorio.getInstancia().buscarUsuarioPorCodigo(codUsuario);
-        ILivro livro = Repositorio.getInstancia().buscarLivroPorCodigo(codLivro);
-
-        if (usuario == null || livro == null) {
-            System.out.println("Usuário ou livro não encontrado.");
-            return;
-        }
-
-        if (!(usuario instanceof IObservador)) {
-            System.out.println("Este usuário não pode ser observador.");
-            return;
-        }
-
-        livro.registrarObservador((IObservador) usuario);
-        System.out.println("Observador registrado com sucesso.");
+        String resultado = servico.registrarObservador(codUsuario, codLivro);
+        System.out.println(resultado);
     }
 }

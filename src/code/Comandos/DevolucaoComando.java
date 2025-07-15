@@ -1,13 +1,10 @@
-//desbugado em caso de teste comum, checar tentando quebrar
 package Comandos;
 
-import Repositorio.Repositorio;
-import Usuarios.IUsuario;
-import Emprestimo.Emprestimo;
-
-import java.time.LocalDate;
+import Services.BibliotecaService;
 
 public class DevolucaoComando implements IComando {
+
+    private BibliotecaService servico = new BibliotecaService();
 
     @Override
     public void executar(String[] args) {
@@ -19,23 +16,7 @@ public class DevolucaoComando implements IComando {
         int codUsuario = Integer.parseInt(args[0]);
         int codLivro = Integer.parseInt(args[1]);
 
-        IUsuario usuario = Repositorio.getInstancia().buscarUsuarioPorCodigo(codUsuario);
-        if (usuario == null) {
-            System.out.println("Usuário não encontrado.");
-            return;
-        }
-
-        Emprestimo emprestimo = usuario.getEmprestimos().stream()
-            .filter(e -> e.estaEmAndamento() && e.getExemplar().getLivro().getCodigo() == codLivro)
-            .findFirst()
-            .orElse(null);
-
-        if (emprestimo == null) {
-            System.out.println("Empréstimo não encontrado.");
-            return;
-        }
-
-        emprestimo.registrarDevolucao(LocalDate.now());
-        System.out.println("Devolução registrada com sucesso.");
+        String resultado = servico.realizarDevolucao(codUsuario, codLivro);
+        System.out.println(resultado);
     }
 }
