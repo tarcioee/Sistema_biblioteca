@@ -31,9 +31,7 @@ public class Repositorio {
     }
 
     public IUsuario buscarUsuarioPorCodigo(int codigo) {
-        Optional<IUsuario> usuario = usuarios.stream()
-            .filter(u -> u.getCodigo() == codigo)
-            .findFirst();
+        Optional<IUsuario> usuario = usuarios.stream().filter(u -> u.getCodigo() == codigo).findFirst();
         return usuario.orElse(null);
     }
 
@@ -47,9 +45,7 @@ public class Repositorio {
     }
 
     public ILivro buscarLivroPorCodigo(int codigo) {
-        Optional<ILivro> livro = livros.stream()
-            .filter(l -> l.getCodigo() == codigo)
-            .findFirst();
+        Optional<ILivro> livro = livros.stream().filter(l -> l.getCodigo() == codigo).findFirst();
         return livro.orElse(null);
     }
 

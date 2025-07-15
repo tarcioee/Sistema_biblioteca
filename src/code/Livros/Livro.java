@@ -109,4 +109,20 @@ public class Livro implements ILivro {
             obs.notificar();
         }
     }
+
+    @Override
+    public String toString() {
+        return "Livro {" +
+            "código = " + codigo +
+            ", título = '" + titulo + '\'' +
+            ", editora = '" + editora + '\'' +
+            ", autores = '" + autores + '\'' +
+            ", edição = '" + edicao + '\'' +
+            ", ano de publicação = " + anoPublicacao +
+            ", nº de exemplares = " + exemplares.size() +
+            ", nº de reservas = " + reservas.size() +
+            ", nº de observadores = " + observadores.size() +
+            '}';
+    }
+
 }
