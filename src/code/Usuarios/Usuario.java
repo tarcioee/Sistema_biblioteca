@@ -10,14 +10,12 @@ import Reserva.Reserva;
 public abstract class Usuario implements IUsuario {
     protected int codigo;
     protected String nome;
-    protected int contadorNotificacoes;
     protected List<Emprestimo> emprestimos;
     protected List<Reserva> reservas;
 
     public Usuario(int codigo, String nome) {
         this.codigo = codigo;
         this.nome = nome;
-        this.contadorNotificacoes = 0;
         this.emprestimos = new ArrayList<>();
         this.reservas = new ArrayList<>();
     }
@@ -62,11 +60,6 @@ public abstract class Usuario implements IUsuario {
         return false;
     }
     
-    public int getNotificacoesRecebidas() {
-    return contadorNotificacoes;
-}
-
-
     public abstract int getLimiteEmprestimos();
     public abstract int getLimiteDiasEmprestimo();
 }

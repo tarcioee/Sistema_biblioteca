@@ -18,5 +18,4 @@ public interface IUsuario extends IEntidadeBiblioteca {
     void adicionarEmprestimo(Emprestimo emprestimo);
     void adicionarReserva(Reserva reserva);
     boolean possuiEmprestimoAtivoDoLivro(int codigoLivro);
-    int getNotificacoesRecebidas();
 }

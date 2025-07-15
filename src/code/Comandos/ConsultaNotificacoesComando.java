@@ -1,6 +1,7 @@
 //Revisado, tudo certo
 package Comandos;
 
+import Observadores.IObservador;
 import Repositorio.Repositorio;
 import Usuarios.IUsuario;
 
@@ -20,7 +21,9 @@ public class ConsultaNotificacoesComando implements IComando {
             System.out.println("Usuário não encontrado.");
             return;
         }
-
-        System.out.println("Notificações recebidas: " + usuario.getNotificacoesRecebidas());
+        
+        IObservador observador = (IObservador) usuario;
+        System.out.println("Notificações recebidas: " + observador.getContadorNotificacoes());
+        
     }
 }
