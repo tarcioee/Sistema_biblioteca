@@ -1,8 +1,9 @@
 package Livros;
 
+import Biblioteca.IEntidadeBiblioteca;
 import Usuarios.IUsuario;
 
-public interface IExemplar {
+public interface IExemplar extends IEntidadeBiblioteca {
     int getCodigo();
     ILivro getLivro();
     boolean estaDisponivel();

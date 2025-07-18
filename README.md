@@ -47,4 +47,3 @@ Padrão command (obrigatório): Cada ação do usuário (empréstimo, devoluçã
 Padrão strategy (obrigatório): pra parte das diferentes estratégias de empréstimo pra cada tipo de usuário
 Padrão observer (obrigatório): pra parte de professor poder observar livros e tals
 Padrão state (óbvio): pra um exemplar com os estados disponivel e emprestado
-Padrão repository(óbvio): por repositorio encapsular a coleção de livros e usuários

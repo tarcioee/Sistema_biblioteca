@@ -31,6 +31,7 @@ public class Exemplar implements IExemplar {
         return estado.estaDisponivel();
     }
 
+    //daqui pra baixo deveria ter ido pras classes de estado
     @Override
     public void emprestar(IUsuario usuario) {
         this.estado = new ExemplarEmprestado();
