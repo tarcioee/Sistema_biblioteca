@@ -4,7 +4,7 @@ import Observadores.IObservador;
 import java.util.HashSet;
 import java.util.Set;
 
-import Emprestimo.Estrategias.EmprestimoAluno;
+import Emprestimo.Estrategias.EmprestimoProfessor;
 import Emprestimo.Estrategias.IEstrategiaEmprestimo;
 
 public class Professor extends Usuario implements IObservador {
@@ -46,6 +46,6 @@ public class Professor extends Usuario implements IObservador {
     }
 
     public IEstrategiaEmprestimo getEstrategiaEmprestimo() {
-		return new EmprestimoAluno();
+		return new EmprestimoProfessor();
 	}
 }
