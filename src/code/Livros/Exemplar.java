@@ -9,18 +9,17 @@ public class Exemplar implements IExemplar {
     public ILivro livro;
     private int codigo;
     private IExemplarEstado estado;
-    private IUsuario usuarioAtual;
 
     public Exemplar(int codigo, ILivro livro) {
         this.codigo = codigo;
         this.livro = livro;
         this.estado = new ExemplarDisponivel();
-        this.usuarioAtual = null;
     }
 
     public ILivro getLivro(){
         return livro;
     }
+    
     @Override
     public int getCodigo() {
         return codigo;
@@ -28,24 +27,26 @@ public class Exemplar implements IExemplar {
 
     @Override
     public boolean estaDisponivel() {
+        // Delega a chamada para o objeto de estado atual
         return estado.estaDisponivel();
     }
 
-    //daqui pra baixo deveria ter ido pras classes de estado
     @Override
     public void emprestar(IUsuario usuario) {
-        this.estado = new ExemplarEmprestado();
-        this.usuarioAtual = usuario;
+        // Delega a ação para o estado e atualiza sua referência para o novo estado
+        this.estado = estado.emprestar(usuario);
     }
 
     @Override
     public void devolver() {
-        this.estado = new ExemplarDisponivel();
-        this.usuarioAtual = null;
+        // Delega a ação para o estado e atualiza sua referência para o novo estado
+        this.estado = estado.devolver();
     }
+
 
     @Override
     public IUsuario getUsuarioAtual() {
-        return usuarioAtual;
+        // Delega a chamada para o objeto de estado atual
+        return estado.getUsuarioAtual();
     }
 }
